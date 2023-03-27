@@ -1,22 +1,23 @@
-// 1st Class TypeScript
-var input1 = document.getElementById("num1");
-var input2 = document.getElementById("num2");
-var button = document.querySelector("button");
-function add(num1, num2) {
-    return num1 + num2;
-}
-button.addEventListener("click", function () {
-    console.log(add(+input1.value, +input2.value));
+// // 1st Class TypeScript
+var person = {
+    name: "Osama",
+    rollNo: 226,
+    hobbies: ["Video Games"],
+};
+person.email = "test@test.com";
+var persons = [];
+persons.push({
+    name: "New",
+    rollNo: 301,
+    hobbies: ["Cricket"],
+    email: "test@test.com"
 });
-// Basic Types
-// Number 1,2,-3
-// String "Osama"
-// Bolean true, false
-var number;
-number = 1;
-var arr;
-arr = ["Apple", "Orange"];
-arr.push("Mango");
-arr.push();
-var arr2 = [1, 2, 3];
-arr2.push();
+var add = function (val1, val2, calc) {
+    if (calc === "add" || calc === "+") {
+        return val1 + val2;
+    }
+    else if (calc === "subtract" || calc === "-") {
+        return val1 - val2;
+    }
+};
+console.log(add(10, 5, "subtract"));
